@@ -1,0 +1,5 @@
+.list-item {
+    display: inline-block;
+    background: red;
+    padding: 10px;
+}
