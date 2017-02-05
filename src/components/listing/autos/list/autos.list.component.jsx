@@ -10,8 +10,7 @@ export default class AutosList extends React.Component{
             data:[]
         }
     }
-
-     componentDidMount () {
+     componentWillMount () {
          let data=axios.get('http://localhost:5000/autos')
          data.then((res)=>{
    
@@ -19,6 +18,16 @@ export default class AutosList extends React.Component{
                    data:res.data
              });
          })
+     }
+
+     componentDidMount () {
+        //  let data=axios.get('http://localhost:5000/autos')
+        //  data.then((res)=>{
+   
+        //      this.setState({
+        //            data:res.data
+        //      });
+        //  })
      }
       render(){
           return(
