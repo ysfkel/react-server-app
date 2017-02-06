@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD:src/components/property/list/property-list.component.jsx
 import Listing from '../../listing/listing.component.jsx';
+=======
+
+>>>>>>> 710d2d300e158eb3557f0857428846e4a6194bc4:src/components/property/list/property-list.component.jsx
 import axios from 'axios';
 import Property from '../item/property-list-item.component.jsx';
 

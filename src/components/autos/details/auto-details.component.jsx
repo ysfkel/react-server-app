@@ -30,7 +30,7 @@ export default class  AutoDetails extends React.Component{
            
          
             return(
-                <div>
+                <div >
                     <h1>Auto  details </h1>
                        <DetailImage url={this.state.data.url}/>
                  

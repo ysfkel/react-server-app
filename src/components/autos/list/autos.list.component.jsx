@@ -1,7 +1,16 @@
 import React from 'react';
+<<<<<<< HEAD:src/components/autos/list/autos.list.component.jsx
 import Listing from '../../listing/listing.component.jsx';
+=======
+import Listing from '../../shared/listing/listing.component.jsx';
+>>>>>>> 710d2d300e158eb3557f0857428846e4a6194bc4:src/components/autos/list/autos.list.component.jsx
 import axios from 'axios';
 import Auto from '../item/auto-list-item.component.jsx';
+//import ExecutionEnvironment from 'exenv';
+//import Deck from 'react-slide-deck';
+//import PageContainer from 'react-page-transitions';
+//var Deck = ExecutionEnvironment.canUseDOM ? require('react-slide-deck').Deck : null;//React.DOM.div;
+
 export default class AutosList extends React.Component{
 
     constructor(){
@@ -10,6 +19,13 @@ export default class AutosList extends React.Component{
             data:[]
         }
     }
+
+     static fetchData() {
+         return {
+             name:'yusuf kelo'
+         }
+     } // will be used for server side rendering
+
      componentWillMount () {
          let data=axios.get('http://localhost:5000/autos')
          data.then((res)=>{
@@ -30,8 +46,14 @@ export default class AutosList extends React.Component{
         //  })
      }
       render(){
-          return(
-              <div>
+       //   console.log('ExecutionEnvironment',ExecutionEnvironment)
+           const { data } = this.state // => const data = this.state.data
+        //   console.log('Pa',Deck)
+
+        
+               return(
+
+              <div >
                   <header>
                       <h1>Autos page</h1>
                   </header>
@@ -41,8 +63,13 @@ export default class AutosList extends React.Component{
                      }
                      {/*<Listing list={this.state.data} />*/}
                   </div>
+                   <script dangerouslySetInnerHTML={ { __html: 'window.PROPS=' + JSON.stringify(data) } }/>
               </div>
-          );
+          
+               )
+       
+          // }
+        
       }
 
 }
