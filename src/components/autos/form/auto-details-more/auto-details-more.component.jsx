@@ -1,51 +1,100 @@
 import React from 'react';
+import SelectField from 'material-ui/SelectField';
+import MenuItem from 'material-ui/MenuItem';
+import TextField from 'material-ui/TextField';
 
 
 export default class AutoDetailsMore extends React.Component{
    
+  constructor(){
+        super();
+        this.handleChange = this.handleChange.bind(this);
+        this.state={
+            value:1
+        }
+    }
+
+       handleChange(event,index,value){
+         console.log(event,index,value)
+         this.setState({
+             value:value
+         });
+         console.log(event,index,value)
+     }
+
 
     render(){
         return(
             <div>
                 <div>
-                    <label htmlFor="">Body Condition</label>
-                    <select name="" id=""></select>
+                    <SelectField floatingLabelText="Body Condition*"
+                            value={this.state.value} onChange={this.handleChange}>
+                           <MenuItem value={1} primaryText="body condition 1"/>
+                           <MenuItem value={2}  primaryText="body condition 2"/>
+                     </SelectField>
                 </div>
                  <div>
-                    <label htmlFor="">Mechanical condition</label>
-                    <select name="" id=""></select>
+                     <SelectField floatingLabelText="Mechanical Condition*"
+                            value={this.state.value} onChange={this.handleChange}>
+                           <MenuItem value={1} primaryText="mechanical condition 1"/>
+                           <MenuItem value={2}  primaryText="mechanical condition 2"/>
+                     </SelectField>
                 </div>
                  <div>
-                    <label htmlFor="">Color</label>
-                    <select name="" id=""></select>
+                     <SelectField floatingLabelText="Mechanical Condition*"
+                            value={this.state.value} onChange={this.handleChange}>
+                           <MenuItem value={1} primaryText="color"/>
+                           <MenuItem value={2}  primaryText="color"/>
+                     </SelectField>
                 </div>
                  <div>
-                    <label htmlFor="">Doors</label>
-                    <select name="" id=""></select>
+                      <SelectField floatingLabelText="Doors*"
+                            value={this.state.value} onChange={this.handleChange}>
+                           <MenuItem value={1} primaryText="2"/>
+                           <MenuItem value={2}  primaryText="3"/>
+                     </SelectField>
                 </div>
                  <div>
-                    <label htmlFor="">Cylinders</label>
-                    <select name="" id=""></select>
+                    <SelectField floatingLabelText="Cylinders*"
+                            value={this.state.value} onChange={this.handleChange}>
+                           <MenuItem value={1} primaryText="2"/>
+                           <MenuItem value={2}  primaryText="3"/>
+                     </SelectField>
                 </div>
                  <div>
-                    <label htmlFor="">Horsepower</label>
-                    <select name="" id=""></select>
+                     <SelectField floatingLabelText="Horse Power*"
+                            value={this.state.value} onChange={this.handleChange}>
+                           <MenuItem value={1} primaryText="2hp"/>
+                           <MenuItem value={2}  primaryText="3hp"/>
+                     </SelectField>
                 </div>
                  <div>
-                    <label htmlFor="">Transmission</label>
-                    <select name="" id=""></select>
+                    <SelectField floatingLabelText="Transmission*"
+                            value={this.state.value} onChange={this.handleChange}>
+                           <MenuItem value={1} primaryText="tp1"/>
+                           <MenuItem value={2}  primaryText="tp2"/>
+                     </SelectField>
                 </div>
                  <div>
-                    <label htmlFor="">Fuel Type</label>
-                    <select name="" id=""></select>
+                    <SelectField floatingLabelText="Fuel Type*"
+                            value={this.state.value} onChange={this.handleChange}>
+                           <MenuItem value={1} primaryText="ft 1"/>
+                           <MenuItem value={2}  primaryText="gt 2"/>
+                     </SelectField>
                 </div>
                  <div>
-                    <label htmlFor="">Regional Specs</label>
-                    <select name="" id=""></select>
+                    <SelectField floatingLabelText="Regional Specs*"
+                            value={this.state.value} onChange={this.handleChange}>
+                           <MenuItem value={1} primaryText="regional specs"/>
+                           <MenuItem value={2}  primaryText="regional specs"/>
+                     </SelectField>
                 </div>
                  <div>
-                    <label htmlFor="">Warranty</label>
-                    <select name="" id=""></select>
+                           <SelectField floatingLabelText="Warranty*"
+                            value={this.state.value} onChange={this.handleChange}>
+                           <MenuItem value={1} primaryText="warrant 1"/>
+                           <MenuItem value={2}  primaryText="warranty 2"/>
+                     </SelectField>
                 </div>
             </div>
         );

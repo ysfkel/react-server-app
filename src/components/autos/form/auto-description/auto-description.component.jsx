@@ -1,4 +1,5 @@
 import React from 'react';
+import TextField from 'material-ui/TextField';
 
 export default class AutoDescriptionForm extends React.Component{
         
@@ -10,13 +11,16 @@ export default class AutoDescriptionForm extends React.Component{
             return(
                 <div>
                     <div>
-                        <input type="text"/>
+                        <TextField hintText="e.g Audi R8 for sale*" floatingLabelText="Ad Title*"  ></TextField>
                     </div>
                     <div>
-                        <input type="text"/>
+                         <TextField hintText="" floatingLabelText="Phone No*" ></TextField>
                     </div>
                     <div>
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                        <TextField
+                          hintText="Describe your car here"
+                          floatingLabelText="Description"
+                          multiLine={true}></TextField>
                     </div>
                 </div>
             );

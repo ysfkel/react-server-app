@@ -4,6 +4,10 @@ import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { match, RouterContext } from 'react-router';
 import routes from './components/routing/routes.jsx';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
+process.env.NODE_ENV = 'DEV';
 
 const app = new Express();
 app.set('view engine', 'ejs');
@@ -30,8 +34,26 @@ app.get("*", function(req, res) {
                     //if we have render props, render routes
                     // if we got props then we matched a route and can render
                     if (renderProps) {
-                        let html = renderToString( < RouterContext {...renderProps }
-                            />);
+
+                        /**
+                         * FOR MATERIAL UI
+                         */
+                               global.navigator = {
+                                    userAgent: req.headers['user-agent']
+                                };
+                                console.log('>>>>>>>> navigator.userAgent')
+                                console.log(navigator.userAgent)
+                                const muiTheme = getMuiTheme({userAgent: req.headers['user-agent']});
+
+                          /**
+                           * END MATERIAL UI CONFIG
+                           * */      
+
+                              let html = renderToString( 
+                                         <MuiThemeProvider muiTheme={muiTheme}>
+                                         < RouterContext {...renderProps }/>
+                                                </MuiThemeProvider>
+                            );
 
                             return res.render("index", { html });
                         }
