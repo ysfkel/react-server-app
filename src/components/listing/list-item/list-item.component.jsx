@@ -1,5 +1,5 @@
 import React from 'react';
-import Thumbnail from '../../../shared/image/thumbnail/thumbnail.component.jsx';
+import Thumbnail from '../../shared/image/thumbnail/thumbnail.component.jsx';
 
 //import './list-item.component.scss';
 

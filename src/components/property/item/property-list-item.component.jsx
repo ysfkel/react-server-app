@@ -1,5 +1,5 @@
 import React from 'react';
-import ListItem from '../../shared/list-item/list-item.component.jsx';
+import ListItem from '../../listing/list-item/list-item.component.jsx';
 import { Link } from 'react-router';
 
 const Property=({property})=>{

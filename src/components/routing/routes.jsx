@@ -2,11 +2,11 @@ import React from 'react';
 import { Router, browserHistory, Route, IndexRoute } from 'react-router';
 import App from '../pages/app.jsx'
 import Home from '../home/home.component.jsx';
-import Autos from '../listing/autos/list/autos.list.component.jsx';
-import Property from '../listing/property/list/property-list.component.jsx';
-import PropertyDetails from '../listing/property/details/property-details.component.jsx';
-import ListItemDetails from '../listing/shared/list-item/list-item.component.jsx';
-import AutoDetails from '../../components/listing/autos/details/auto-details.component.jsx';
+import Autos from '../autos/list/autos.list.component.jsx';
+import Property from '../property/list/property-list.component.jsx';
+import PropertyDetails from '../property/details/property-details.component.jsx';
+import AutoDetails from '../autos/details/auto-details.component.jsx';
+import AutoForm from '../autos/form/auto-form.component.jsx';
 
 
 const routes=(
@@ -17,6 +17,7 @@ const routes=(
                   <Route path="auto/:id" component={AutoDetails} />
                   <Route path="property" component={Property}/>
                   <Route path="property/:id" component={PropertyDetails}></Route>
+                  <Route path="place-car-ad" component={AutoForm}/>
               </Route>  
 );
 

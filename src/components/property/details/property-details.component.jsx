@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import DetailImage from '../../../shared/image/detail-image/detail-image.component.jsx';
+import DetailImage from '../../shared/image/detail-image/detail-image.component.jsx';
 
 
 export default class PropertyDetails extends React.Component{

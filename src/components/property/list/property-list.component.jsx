@@ -1,5 +1,5 @@
 import React from 'react';
-import Listing from '../../shared/listing.component.jsx';
+import Listing from '../../listing/listing.component.jsx';
 import axios from 'axios';
 import Property from '../item/property-list-item.component.jsx';
 
