@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.15.3",
+    "babel-register": "^6.22.0",
     "css-loader": "^0.26.1",
     "ejs": "^2.5.5",
     "exenv": "^1.2.1",
@@ -36,6 +37,7 @@
     "babel-loader": "^6.2.10",
     "babel-preset-es2015": "^6.22.0",
     "babel-preset-react": "^6.22.0",
+    "extract-text-webpack-plugin": "^1.0.1",
     "isomorphic-style-loader": "^1.1.0",
     "webpack": "^2.2.1",
     "webpack-dev-server": "^1.16.3"
