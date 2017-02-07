@@ -23,7 +23,32 @@ module.exports = {
 
 
     module: {
-        loaders: [{
+        loaders: [
+             {
+        test: /\.scss$/,
+        loaders: [
+          'isomorphic-style-loader',
+          'css-loader?modules&localIdentName=[name]_[local]_[hash:base64:3]',
+          'postcss-loader'
+        ]
+      },
+           
+            {
+                test: /\.scss$/,
+                loaders: ["style-loader", "css-loader", "sass-loader"]
+            },
+            { test: /\.css$/, loader: "style-loader!css-loader" },
+            
+
+            {
+        test: /\.css$/,
+        loaders: [
+          'style-loader',
+          'css-loader?importLoaders=1',
+          'postcss-loader'
+        ]
+      },
+             {
                 // test: /\.jsx$/,
                 test: path.join(__dirname, "src"),
                 loader: "babel-loader",
@@ -32,12 +57,7 @@ module.exports = {
                     presets: ["react", "es2015"]
                 },
 
-            },
-            {
-                test: /\.scss$/,
-                loaders: ["style-loader", "css-loader", "sass-loader"]
-            },
-            { test: /\.css$/, loader: "style-loader!css-loader" }
+            }
         ]
     },
     //  plugins: [new webpack.optimize.DedupePlugin()]
