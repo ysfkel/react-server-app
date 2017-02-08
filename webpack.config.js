@@ -50,11 +50,18 @@ module.exports = {
       },
              {
                 // test: /\.jsx$/,
-                test: path.join(__dirname, "src"),
+               // test: path.join(__dirname, "src"),
+               // Skip any files outside of your project's `src` directory
+               include:[
+                   path.resolve(__dirname,'src')
+               ],
+             // Only run `.js` and `.jsx` files through Babel
+               test:/\.jsx?$/,
                 loader: "babel-loader",
                 query: {
                     cacheDirectory: "babel_cache",
-                    presets: ["react", "es2015"]
+                    plugins:['transform-runtime'],
+                    presets: ["es2015","stage-0","react"]
                 },
 
             }

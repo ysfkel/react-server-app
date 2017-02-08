@@ -1,71 +1,61 @@
-import React from 'react';
+import React, {Component } from 'react';
 import Thumbnail from '../../shared/image/thumbnail/thumbnail.component.jsx';
+import { Link } from 'react-router';
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
+import Price from '../../listing/list-item/list-item-price.jsx';
+import AdShrortInfo from './ad-short-info.component.jsx';
+import ListItemTitle from './list-item-title.jsx';
+import  Emailmodal  from '../../shared/email-modal/email-modal.component.jsx';
+import CallButton from '../../shared/buttons/call-button.component.jsx';
+
 //import styles from './list-item.component.scss';
 
-const ListItem=({item})=>{
+export default class ListItem extends Component{
 
-        return(
+      constructor(){
+          super();
+          this.state={
+             item:{url:''}
+          }
+      }
+
+      componentDidMount(){
+          this.setState({
+
+          })
+      }
+    
+    render(){
+        console.log('it',this.props.url)
+            return(
+
      <div className="list-item">
-                           <Card>
-    {/*<CardHeader
-      title="URL Avatar"
-      subtitle="Subtitle"
-      avatar="images/jsa-128.jpg"
-    />*/}
-    <CardMedia
-      overlay={<CardTitle title={item.title} subtitle="Overlay subtitle" />}
-    >
-   
-          <Thumbnail url={item.url} alt=""/>
-    </CardMedia>
-    <CardTitle title={item.title} subtitle="Card subtitle" />
-    <CardText>
-     {item.description}
-    </CardText>
-    <CardActions>
-      <FlatButton label="Action1" />
-      <FlatButton label="Action2" />
-    </CardActions>
-  </Card>
+             <Card>
+              <Link to={this.props.url}>
+            <CardMedia
+            overlay={<CardTitle title={this.props.item.title} subtitle="Overlay subtitle" />}
+            >
+             
+                   <Thumbnail url={this.props.item.url} />
+            
+            </CardMedia>
+              </Link>
+            <CardText>
+                <ListItemTitle data={this.props.item.title}></ListItemTitle>
+                <Price price={this.props.item.price}></Price>
+                <AdShrortInfo dataCollection={[this.props.item.model,this.props.item.mileage]}></AdShrortInfo>
+            </CardText>
+            <CardActions>
+                <Emailmodal/>
+            {/*<FlatButton label="Action1" />*/}
+             <CallButton></CallButton>
+            </CardActions>
+        </Card>
      </div>
-              /*<div  className="card">
 
-                <div className="image-preview">
-                    <Thumbnail url={item.url} alt=""/>
-                </div>
-                 <div className="container item-info">
-                       <div>
-                           {item.title}
-                       </div>
-                       <div>
-                           <p>
-                               {item.description}
-                           </p>
-                       </div>
-                </div>
-              </div>*/
-              /*<div  className="list-item">
-                <div >
-                <div className="image-preview">
-                    <Thumbnail url={item.url} alt=""/>
-                </div>
-                    <div className="item-info">
-                       <div>
-                           {item.title}
-                       </div>
-                       <div>
-                           <p>
-                               {item.description}
-                           </p>
-                       </div>
-                </div>
-
-              </div>  
-              </div>*/
         );
+    }
 
 }
 
-export default ListItem;

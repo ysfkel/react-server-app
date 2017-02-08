@@ -4,10 +4,9 @@ import Listing from '../../shared/listing/listing.component.jsx';
 
 import axios from 'axios';
 import Auto from '../item/auto-list-item.component.jsx';
-//import ExecutionEnvironment from 'exenv';
-//import Deck from 'react-slide-deck';
-//import PageContainer from 'react-page-transitions';
-//var Deck = ExecutionEnvironment.canUseDOM ? require('react-slide-deck').Deck : null;//React.DOM.div;
+
+
+
 
 export default class AutosList extends React.Component{
 
