@@ -12,6 +12,7 @@ import ArrowForwardIcon from 'material-ui/svg-icons/navigation/arrow-forward';
 import AutoDescriptionForm from '../auto-description/auto-description.component.jsx';
 import AutoDetailsForm from '../auto-details/auto-details.component.jsx';
 import AutoDetailsFormMore from '../auto-details-more/auto-details-more.component.jsx';
+import BadgeList from '../badges/badges-list.component.jsx';
 /**
  * It is possible to specify your own step connector by passing an element to the `connector`
  * prop. If you want to remove the connector, pass `null` to the `connector` prop.
@@ -34,7 +35,8 @@ class AutoFormConnector extends React.Component {
     switch (stepIndex) {
       case 0:
         return (
-              <div  >
+              <div>
+                
                   <AutoDescriptionForm></AutoDescriptionForm>
                 </div>
                
@@ -55,13 +57,20 @@ class AutoFormConnector extends React.Component {
 
                 </div>
         );
+
+        case 3:
+         return(
+           <div>
+             <BadgeList></BadgeList>
+           </div>
+         )
     }
   }
 
   handleNext() {
     const {stepIndex} = this.state;
 
-    if (stepIndex < 2) {
+    if (stepIndex < 4) {
       this.setState({stepIndex: stepIndex + 1});
     }
   }
@@ -91,6 +100,13 @@ class AutoFormConnector extends React.Component {
           <Step>
             <StepLabel>Create an ad</StepLabel>
           </Step>
+
+            <Step>
+            <StepLabel>Create an ad</StepLabel>
+          </Step>
+                
+
+
         </Stepper>
 
         {this.getStepContent(stepIndex)}
@@ -103,7 +119,7 @@ class AutoFormConnector extends React.Component {
             style={{marginRight: 12}}
           />
           <RaisedButton
-            label={stepIndex === 2 ? 'Finish' : 'Next'}
+            label={stepIndex === 3 ? 'PROCEED TO CHECKOUT' : 'NEXT'}
             primary={true}
             onTouchTap={this.handleNext}
           />

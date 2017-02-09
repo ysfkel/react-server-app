@@ -16,10 +16,13 @@ export default class AutoDescriptionForm extends React.Component{
                         <TextField className="gt-form-field" hintText="e.g Audi R8 for sale*" floatingLabelText="Ad Title*"  ></TextField>
                     </div>
                     <div>
-                         <TextField hintText="" floatingLabelText="Phone No*" ></TextField>
+                         <TextField 
+                        className="gt-form-field"
+                         hintText="" floatingLabelText="Phone No*" ></TextField>
                     </div>
                     <div>
                         <TextField
+                          className="gt-form-field"
                           hintText="Describe your car here"
                           floatingLabelText="Description"
                           multiLine={true}></TextField>
