@@ -28,6 +28,7 @@ export default class AutoDetailsMore extends React.Component{
             <div>
                 <div>
                     <SelectField floatingLabelText="Body Condition*"
+                           className="gt-form-field"
                             value={this.state.value} onChange={this.handleChange}>
                            <MenuItem value={1} primaryText="body condition 1"/>
                            <MenuItem value={2}  primaryText="body condition 2"/>
@@ -35,6 +36,7 @@ export default class AutoDetailsMore extends React.Component{
                 </div>
                  <div>
                      <SelectField floatingLabelText="Mechanical Condition*"
+                              className="gt-form-field"
                             value={this.state.value} onChange={this.handleChange}>
                            <MenuItem value={1} primaryText="mechanical condition 1"/>
                            <MenuItem value={2}  primaryText="mechanical condition 2"/>
@@ -42,6 +44,7 @@ export default class AutoDetailsMore extends React.Component{
                 </div>
                  <div>
                      <SelectField floatingLabelText="Mechanical Condition*"
+                        className="gt-form-field"
                             value={this.state.value} onChange={this.handleChange}>
                            <MenuItem value={1} primaryText="color"/>
                            <MenuItem value={2}  primaryText="color"/>
@@ -49,6 +52,7 @@ export default class AutoDetailsMore extends React.Component{
                 </div>
                  <div>
                       <SelectField floatingLabelText="Doors*"
+                         className="gt-form-field"
                             value={this.state.value} onChange={this.handleChange}>
                            <MenuItem value={1} primaryText="2"/>
                            <MenuItem value={2}  primaryText="3"/>
@@ -56,6 +60,7 @@ export default class AutoDetailsMore extends React.Component{
                 </div>
                  <div>
                     <SelectField floatingLabelText="Cylinders*"
+                       className="gt-form-field"
                             value={this.state.value} onChange={this.handleChange}>
                            <MenuItem value={1} primaryText="2"/>
                            <MenuItem value={2}  primaryText="3"/>
@@ -63,6 +68,7 @@ export default class AutoDetailsMore extends React.Component{
                 </div>
                  <div>
                      <SelectField floatingLabelText="Horse Power*"
+                        className="gt-form-field"
                             value={this.state.value} onChange={this.handleChange}>
                            <MenuItem value={1} primaryText="2hp"/>
                            <MenuItem value={2}  primaryText="3hp"/>
@@ -70,6 +76,7 @@ export default class AutoDetailsMore extends React.Component{
                 </div>
                  <div>
                     <SelectField floatingLabelText="Transmission*"
+                       className="gt-form-field"
                             value={this.state.value} onChange={this.handleChange}>
                            <MenuItem value={1} primaryText="tp1"/>
                            <MenuItem value={2}  primaryText="tp2"/>
@@ -77,6 +84,7 @@ export default class AutoDetailsMore extends React.Component{
                 </div>
                  <div>
                     <SelectField floatingLabelText="Fuel Type*"
+                       className="gt-form-field"
                             value={this.state.value} onChange={this.handleChange}>
                            <MenuItem value={1} primaryText="ft 1"/>
                            <MenuItem value={2}  primaryText="gt 2"/>
@@ -84,6 +92,7 @@ export default class AutoDetailsMore extends React.Component{
                 </div>
                  <div>
                     <SelectField floatingLabelText="Regional Specs*"
+                       className="gt-form-field"
                             value={this.state.value} onChange={this.handleChange}>
                            <MenuItem value={1} primaryText="regional specs"/>
                            <MenuItem value={2}  primaryText="regional specs"/>
@@ -91,6 +100,7 @@ export default class AutoDetailsMore extends React.Component{
                 </div>
                  <div>
                            <SelectField floatingLabelText="Warranty*"
+                              className="gt-form-field"
                             value={this.state.value} onChange={this.handleChange}>
                            <MenuItem value={1} primaryText="warrant 1"/>
                            <MenuItem value={2}  primaryText="warranty 2"/>

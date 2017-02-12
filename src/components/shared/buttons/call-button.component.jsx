@@ -1,4 +1,5 @@
 import React, {Component } from 'react';
+import FlatButton from 'material-ui/FlatButton';
 
 export default class CallButton extends Component{
 
@@ -18,11 +19,13 @@ export default class CallButton extends Component{
 
      render(){
          return(
-             <button onClick={this.handleClick}>
-                 {
-                     this.state.isToggleOn?'xx xx ':'CALL'
+        
+
+             <FlatButton   primary={true} onTouchTap={this.handleClick}>
+                     {
+                     this.state.isToggleOn?'xx xx ':'CALL US'
                  }
-             </button>
+             </FlatButton>
          );
      }
 

@@ -8,8 +8,9 @@ import AdShrortInfo from './ad-short-info.component.jsx';
 import ListItemTitle from './list-item-title.jsx';
 import  Emailmodal  from '../../shared/email-modal/email-modal.component.jsx';
 import CallButton from '../../shared/buttons/call-button.component.jsx';
+import ContactActions from '../../shared/contact-actions/contact-actions.component.jsx'
 
-//import styles from './list-item.component.scss';
+
 
 export default class ListItem extends Component{
 
@@ -27,32 +28,26 @@ export default class ListItem extends Component{
       }
     
     render(){
-        console.log('it',this.props.url)
+
             return(
 
-     <div className="list-item">
-             <Card>
-              <Link to={this.props.url}>
-            <CardMedia
-            overlay={<CardTitle title={this.props.item.title} subtitle="Overlay subtitle" />}
-            >
-             
-                   <Thumbnail url={this.props.item.url} />
-            
-            </CardMedia>
-              </Link>
-            <CardText>
-                <ListItemTitle data={this.props.item.title}></ListItemTitle>
-                <Price price={this.props.item.price}></Price>
-                <AdShrortInfo dataCollection={[this.props.item.model,this.props.item.mileage]}></AdShrortInfo>
-            </CardText>
-            <CardActions>
-                <Emailmodal/>
-            {/*<FlatButton label="Action1" />*/}
-             <CallButton></CallButton>
-            </CardActions>
-        </Card>
-     </div>
+            <div className="list-item">
+                    <Card>
+                    <Link to={this.props.url}>
+                    <CardMedia overlay={<CardTitle title={this.props.item.title} subtitle="Overlay subtitle" />}>
+                        <Thumbnail url={this.props.item.url} />
+                    </CardMedia>
+                    </Link>
+                    <CardText>
+                        <ListItemTitle data={this.props.item.title}></ListItemTitle>
+                        <Price price={this.props.item.price}></Price>
+                        <AdShrortInfo dataCollection={[this.props.item.model,this.props.item.mileage]}></AdShrortInfo>
+                    </CardText>
+                    <CardActions>
+                        <ContactActions item={this.props.item}/>
+                    </CardActions>
+                </Card>
+            </div>
 
         );
     }

@@ -11,13 +11,13 @@ export default class AutoDescription extends React.Component{
                   </h1>
                 </header>
                 <div>
-                    <input type="text" />
+                    <input type="text"    className="gt-form-field"/>
                 </div>
                    <div>
-                    <input type="text" />
+                    <input type="text"    className="gt-form-field"/>
                 </div>
                 <div>
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                    <textarea    className="gt-form-field" name="" id="" cols="30" rows="10"></textarea>
                 </div>
             </div>
         )

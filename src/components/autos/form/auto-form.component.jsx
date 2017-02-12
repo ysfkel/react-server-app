@@ -32,20 +32,7 @@ import AutoFormConnector from './auto-form-connector/auto-form-connector.connect
         }
         return(
             <div>
-                  <div>
                       <AutoFormConnector></AutoFormConnector>
-                  </div>
-        
-                <div  >
-                  <AutoDescriptionForm></AutoDescriptionForm>
-                </div>
-                <div  >
-                    <AutoDetailsForm></AutoDetailsForm>
-                </div>
-                <div  >
-                    <AutoDetailsFormMore></AutoDetailsFormMore>
-
-                </div>
             </div>
         );
     }
