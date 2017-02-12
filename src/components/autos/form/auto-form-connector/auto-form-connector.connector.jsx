@@ -12,7 +12,7 @@ import ArrowForwardIcon from 'material-ui/svg-icons/navigation/arrow-forward';
 import AutoDescriptionForm from '../auto-description/auto-description.component.jsx';
 import AutoDetailsForm from '../auto-details/auto-details.component.jsx';
 import AutoDetailsFormMore from '../auto-details-more/auto-details-more.component.jsx';
-import BadgeList from '../badges/badges-list.component.jsx';
+import BadgeList from '../../../shared/badges/badges-list.component.jsx';
 /**
  * It is possible to specify your own step connector by passing an element to the `connector`
  * prop. If you want to remove the connector, pass `null` to the `connector` prop.
@@ -35,8 +35,8 @@ class AutoFormConnector extends React.Component {
     switch (stepIndex) {
       case 0:
         return (
-              <div>
-                
+              <div className="step-item">
+                  
                   <AutoDescriptionForm></AutoDescriptionForm>
                 </div>
                
@@ -44,7 +44,7 @@ class AutoFormConnector extends React.Component {
 
       case 1:
         return (
-         <div  >
+         <div  className="step-item">
                     <AutoDetailsForm></AutoDetailsForm>
                 </div>
               
@@ -52,7 +52,7 @@ class AutoFormConnector extends React.Component {
 
       case 2:
         return (
-         <div  >
+         <div  className="step-item">
                     <AutoDetailsFormMore></AutoDetailsFormMore>
 
                 </div>
@@ -60,7 +60,7 @@ class AutoFormConnector extends React.Component {
 
         case 3:
          return(
-           <div>
+           <div className="step-item">
              <BadgeList></BadgeList>
            </div>
          )
@@ -90,26 +90,28 @@ class AutoFormConnector extends React.Component {
       <div style={{width: '100%', maxWidth: 700, margin: 'auto'}}>
         <Stepper activeStep={stepIndex} connector={<ArrowForwardIcon />}>
           <Step>
-            <StepLabel>Select campaign settings</StepLabel>
+            <StepLabel>Describe your car</StepLabel>
           </Step>
 
           <Step>
-            <StepLabel>Create an ad group</StepLabel>
+            <StepLabel>AD Details</StepLabel>
           </Step>
 
           <Step>
-            <StepLabel>Create an ad</StepLabel>
+            <StepLabel>Elaborate Further</StepLabel>
           </Step>
 
             <Step>
-            <StepLabel>Create an ad</StepLabel>
+            <StepLabel>Sell it faster</StepLabel>
           </Step>
                 
 
 
         </Stepper>
 
-        {this.getStepContent(stepIndex)}
+        {
+          this.getStepContent(stepIndex)
+        }
 
         <div style={{marginTop: 24, marginBottom: 12}}>
           <FlatButton

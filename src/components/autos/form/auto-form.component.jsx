@@ -6,7 +6,7 @@ import AutoDetailsFormMore from './auto-details-more/auto-details-more.component
 import ExecutionEnvironment from 'exenv';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import AutoFormConnector from './auto-form-connector/auto-form-connector.connector.jsx';
-import BadgeList from './badges/badges-list.component.jsx';
+
 //import css from './auto-form.component.scss';
 
 
@@ -32,10 +32,7 @@ import BadgeList from './badges/badges-list.component.jsx';
         }
         return(
             <div>
-                  <div>
                       <AutoFormConnector></AutoFormConnector>
-                  </div>
-
             </div>
         );
     }

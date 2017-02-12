@@ -15,11 +15,9 @@ export default class AutoDetailsForm extends React.Component{
 
 
      handleChange(event,index,value){
-         console.log(event,index,value)
          this.setState({
              value:value
          });
-         console.log(event,index,value)
      }
 
       render(){

@@ -15,10 +15,10 @@ export default class Badge extends React.Component{
 
           render(){
 
-              const iconStyles = {
-  marginRight: 24,
-      padding:30
-};
+                        const iconStyles = {
+            marginRight: 24,
+                padding:30
+            };
 
               return(
                  

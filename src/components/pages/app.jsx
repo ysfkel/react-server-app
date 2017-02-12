@@ -18,12 +18,12 @@ export default class App extends React.Component{
           return(
               <MuiThemeProvider>
               <div className="container app-container">
-                    <RaisedButton label="Default" />
+            
                   <Link to={"/home"}>home</Link>
                   <Link to={"/autos"}>Autos</Link>
                   <Link to={"/property"}>Property</Link>
                   <Link to={"/jobs"}>Jobs</Link>
-                  <Link to={"/place-auto-ad"}>Place Ad</Link>
+                  <Link to={"/select-ad-type"}>Place Ad</Link>
                  {this.props.children || "This is the default content"}
               </div>
               </MuiThemeProvider>
