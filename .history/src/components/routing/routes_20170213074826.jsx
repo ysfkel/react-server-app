@@ -12,7 +12,7 @@ import AutoDetails from '../autos/details/auto-details.component.jsx';
 import AutoDescriptionForm from '../autos/form/auto-form.component.jsx';
 import PropertyForm from '../property/form/property-form.component.jsx';
 import SelectAdType from '../ad/select-ad-type.component.jsx';
-import EditProperty from '../property/form/edit/edit-property.component.jsx';
+
 import UserPropertiesList from '../dashboard/ad-list.component.jsx';
 
 const routes=(

@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router';
 import FontIcon from 'material-ui/FontIcon';
 
-
 const UserAd=({item})=>{
 
     return(
@@ -13,7 +12,7 @@ const UserAd=({item})=>{
                                       <span>{item.title}</span>
                                  </div>
                                  <div>
-                                      <Link to={"/edit/property"}>Edit</Link>
+                                      <span>Edit</span>
                                  </div>
                         </div>
       

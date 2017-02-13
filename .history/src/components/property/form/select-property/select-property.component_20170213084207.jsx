@@ -45,13 +45,13 @@ export default class SelectProperty extends Component{
                            <MenuItem value={2}  primaryText="body condition 2"/>
                      </SelectField>
                 </div>
-                
-                    {this.props.showAgreement===true &&
+                {
+                    if(this.props.showAgreement===true){
                         <div>
                           <Checkbox label="I agree that the information shared is correct and inline with RERA guidelines. I am aware that wrong information could lead to my account being suspended"/>
                        </div>
                     }
-                
+                }
             </div>
         );
     }
