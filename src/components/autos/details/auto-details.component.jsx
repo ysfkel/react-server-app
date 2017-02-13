@@ -31,12 +31,11 @@ export default class  AutoDetails extends React.Component{
        
        render(){
 
-           console.log('this.state.data',this.state)
            
             return(
                <div> 
                     <div className="item-details-image-container">
-                        <DetailImage url={this.state.data.url}/>
+                        <DetailImage url={`/assets/images/${this.state.data.url}`}/>
                     </div>
                     <div className="item-details-info-container">
                          <ListItemTitle data={this.state.data.title}/>

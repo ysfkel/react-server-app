@@ -30,7 +30,7 @@ export default class PropertyDetails extends React.Component{
                    <h1>Details</h1>
                </header>
                <div>
-                   <DetailImage url={this.state.data.url}/>
+                   <DetailImage url={`/assets/images/${this.state.data.url}`}/>
 
                </div>
            </div>

@@ -12,8 +12,6 @@ import AutoDetails from '../autos/details/auto-details.component.jsx';
 import AutoDescriptionForm from '../autos/form/auto-form.component.jsx';
 import PropertyForm from '../property/form/property-form.component.jsx';
 import SelectAdType from '../ad/select-ad-type.component.jsx';
-import EditProperty from '../property/form/edit/edit-property.component.jsx';
-import UserPropertiesList from '../dashboard/ad-list.component.jsx';
 
 const routes=(
               <Route path="/" component={App}>
@@ -23,14 +21,11 @@ const routes=(
                   <Route path="auto/:id" component={AutoDetails} />
                   <Route path="property" component={Property}/>
                   <Route path="property/:id" component={PropertyDetails}></Route>
-                  <Route path="user/profile" component={DashBoard}>
-                      <Route path="/my-autos" component={UserPropertiesList}></Route>
-                       <Route path="/my-properties" component={UserPropertiesList}></Route>
-                       <Route path={"/edit/property"} component={EditProperty}/>
-                  </Route>
+                  <Route path="user/profile" component={DashBoard}/>
                   <Route path="select-ad-type" component={SelectAdType}/>
                   <Route path="/place-auto-ad" component={AutoDescriptionForm}/>
                   <Route path="/place-auto-property" component={PropertyForm}/>
+                  
               </Route>  
 );
 
