@@ -52,6 +52,7 @@ export default class AutosList extends React.Component{
 
               <div className="list-container">
                   <header>
+                      {/*<img src="assets/images/TOYO_RAV4_2014.png" alt=""/>*/}
                       <h1>Autos page</h1>
                   </header>
                   <div>

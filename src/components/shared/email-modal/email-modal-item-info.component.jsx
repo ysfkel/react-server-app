@@ -10,7 +10,7 @@ const EmailModalItemInfo=({item})=>{
     return(
         <div>
             <div className="thumbnail-container-email-modal">
-                  <Thumbnail url={item.url}/>
+                  <Thumbnail url={`assets/images/${item.url}`}/>
                 </div>
                 <ListItemTitle data={item.title}/>
                 <Price price={item.price}/>

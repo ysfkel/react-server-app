@@ -35,7 +35,7 @@ export default class ListItem extends Component{
                     <Card>
                     <Link to={this.props.url}>
                     <CardMedia overlay={<CardTitle title={this.props.item.title} subtitle="Overlay subtitle" />}>
-                        <Thumbnail url={this.props.item.url} />
+                        <Thumbnail url={`assets/images/${this.props.item.url}`} />
                     </CardMedia>
                     </Link>
                     <CardText>
@@ -53,4 +53,6 @@ export default class ListItem extends Component{
     }
 
 }
+
+
 

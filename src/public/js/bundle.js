@@ -14315,7 +14315,7 @@ var ListItem = function (_Component) {
                         _react2.default.createElement(
                             _Card.CardMedia,
                             { overlay: _react2.default.createElement(_Card.CardTitle, { title: this.props.item.title, subtitle: 'Overlay subtitle' }) },
-                            _react2.default.createElement(_thumbnailComponent2.default, { url: this.props.item.url })
+                            _react2.default.createElement(_thumbnailComponent2.default, { url: 'assets/images/' + this.props.item.url })
                         )
                     ),
                     _react2.default.createElement(
@@ -29091,7 +29091,7 @@ var EmailModalItemInfo = function EmailModalItemInfo(_ref) {
         _react2.default.createElement(
             'div',
             { className: 'thumbnail-container-email-modal' },
-            _react2.default.createElement(_thumbnailComponent2.default, { url: item.url })
+            _react2.default.createElement(_thumbnailComponent2.default, { url: 'assets/images/' + item.url })
         ),
         _react2.default.createElement(_listItemTitle2.default, { data: item.title }),
         _react2.default.createElement(_listItemPrice2.default, { price: item.price })
