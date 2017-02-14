@@ -1,0 +1,34 @@
+<link rel="import" href="./bower_components/polymer/polymer.html">
+
+<!--
+`START-element`
+
+
+@demo demo/index.html 
+-->
+
+<dom-module id="START-element">
+    <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]</h2>
+  </template>
+
+    <script>
+        Polymer({
+
+            is: 'START-element',
+
+            properties: {
+                prop1: {
+                    type: String,
+                    value: 'START-element',
+                },
+            },
+
+        });
+    </script>
+</dom-module>

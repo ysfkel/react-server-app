@@ -12,6 +12,8 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "^3.3.7"
+    "bootstrap": "^3.3.7",
+    "START-element": "ysfkel/hello-polymer#^0.0.1",
+    "webcomponentsjs": "^0.7.24"
   }
 }

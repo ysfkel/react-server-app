@@ -29,6 +29,7 @@
     "react-modal-dialog": "^4.0.5",
     "react-number-format": "^1.0.2",
     "react-page-transitions": "^1.2.0",
+    "react-polymer": "^3.0.0",
     "react-router": "^3.0.2",
     "react-slick": "^0.14.6",
     "react-slide-deck": "^0.2.3",
