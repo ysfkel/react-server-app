@@ -27078,7 +27078,9 @@ var AutosList = function (_React$Component) {
                         'h1',
                         null,
                         'Autos page'
-                    )
+                    ),
+                    'hello! ',
+                    _react2.default.createElement('hello-world', null)
                 ),
                 _react2.default.createElement(
                     'div',
